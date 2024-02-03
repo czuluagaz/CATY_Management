@@ -14,10 +14,11 @@
 # import libraries
 import requests
 import json
+import os
 
 
 # API key
-api_key = '266895e794130d12da86325780cc0e0b'
+api_key = 'a019bc0712358cb223887c5bf73bb473'
 
 # base url
 base_url = 'http://api.openweathermap.org/data/2.5/onecall?'
@@ -37,6 +38,20 @@ weather_data = response.json()
 
 # print the response
 print(weather_data)
+
+# # if weather_data.json already exists, append the response to the file, if not create file and append the response
+# if os.path.exists('data_storage/weather_data.json'):
+#     with open('data_storage/weather_data.json', 'r') as json_file:
+#         weather_data = json.load(json_file)
+#         weather_data.append(weather_data)
+# else:
+#     with open('data_storage/weather_data.json', 'w') as json_file:
+#         json.dump(weather_data, json_file)
+
+
+
+# append the response to a json file weather_data.json
+json_weather_data = json.dumps(weather_data, indent=4)
 
 # write the response to a json file
 with open('data_storage/weather_data.json', 'w') as json_file:
