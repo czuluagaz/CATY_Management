@@ -1,2 +1,3 @@
 .mypy_cache
 temp/*
+data_storage/*
