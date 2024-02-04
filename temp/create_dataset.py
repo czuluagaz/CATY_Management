@@ -7,6 +7,10 @@
 import csv
 import os
 import pandas as pd
+import time
+
+# Initialize the timer
+start = time.time()
 
 # Variables
 # call dataframe from tsv file in hard drive
@@ -31,21 +35,29 @@ df = df.drop(columns=['day', 'month', 'year'])
 # create a column "date_eom" with the end of the month from the column 'date' 
 df['date_eom'] = pd.to_datetime(df['date'], format='dd-mm-YYYY') + pd.offsets.MonthEnd(0)
 
+# add a column 'tt_days_month' with the number of days in the month of the column 'date_eom'
+df['ttl_days_month'] = df['date_eom'].dt.daysinmonth
+
+# in headers change ' ' to '_'
+df.columns = df.columns.str.replace(' ', '_')
+
 # create a new df (dfref) with a column that contains dates from 31/01/2011 to 31/12/2024
-dfref = pd.DataFrame(pd.date_range(start='31/01/2011', end='31/12/2024', freq='M'), columns=['date_eom'])
+dfref = pd.DataFrame(pd.date_range(start='30/06/2011', end='31/12/2024', freq='M'), columns=['date_eom'])
 
 # merge df and dfref in date_eom
 df = pd.merge(dfref, df, on='date_eom', how='left')
 
-# drop from 'date_eom' dates before 1/06/2011
-df = df[df['date_eom'] > '29/06/2011']
+print(df.head(100))
 
 # generate 3 csv files (water, power, gas) with the columns 'date_eom', 'time', 'water', 'power', 'gas'
-df_water = df[['date_eom', 'date', 'days', 'water m3', 'cons', 'av day.1']]
+df_water = df[['date_eom', 'ttl_days_month', 'date', 'days', 'water_m3', 'cons', 'av_day.1']]
 df_water.to_csv('data_storage/water.csv', index=False)
 
-df_power = df[['date_eom', 'date', 'days', 'power kw/h', 'cons power', 'av day.2']]
+df_power = df[['date_eom', 'ttl_days_month',  'date', 'days', 'power_kw/h', 'cons_power', 'av_day.2']]
 df_power.to_csv('data_storage/power.csv', index=False)
 
-df_gas = df[['date_eom', 'date', 'days', 'gaz m3', 'cons gaz', 'av day']]
+df_gas = df[['date_eom', 'ttl_days_month',  'date', 'days', 'gaz_m3', 'cons_gaz', 'av_day']]
 df_gas.to_csv('data_storage/gas.csv', index=False)
+
+# Print the execution time
+print('Process finished. Execution time:', round(time.time() - start, 2), 'seconds')
