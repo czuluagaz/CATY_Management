@@ -35,12 +35,7 @@ df["date_eom"] = pd.to_datetime(df["date"], format="dd-mm-YYYY") + pd.offsets.Mo
     0
 )
 
-# add a column 'ttl_days_month' with number of days for each month in 'date_eom'
-df["ttl_days_month"] = df["date_eom"].dt.daysinmonth
-
-# fill "ttl_days_month" with the number of days in the month
-df["ttl_days_month"] = df["ttl_days_month"].fillna(df["ttl_days_month"].mean())
-
+df.info()
 # in headers change ' ' to '_'
 df.columns = df.columns.str.replace(" ", "_")
 
@@ -58,7 +53,6 @@ print(df.head(100))
 df_water = df[
     [
         "date_eom",
-        "ttl_days_month",
         "date",
         "days",
         "water_m3",
@@ -71,7 +65,6 @@ df_water.to_csv("data_storage/water.csv", index=False)
 df_power = df[
     [
         "date_eom",
-        "ttl_days_month",
         "date",
         "days",
         "power_kw/h",
@@ -84,7 +77,6 @@ df_power.to_csv("data_storage/power.csv", index=False)
 df_gas = df[
     [
         "date_eom",
-        "ttl_days_month",
         "date",
         "days",
         "gaz_m3",
