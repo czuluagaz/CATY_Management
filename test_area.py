@@ -5,3 +5,5 @@ print(df.head(5))
 df.info()
 print(df.index)
 df.columns
+
+

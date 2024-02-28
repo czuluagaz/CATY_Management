@@ -15,7 +15,7 @@ start = time.time()
 dataset = "data_storage/raw_data.csv"
 
 # Read the csv file
-df = pd.read_csv(dataset, sep=";")
+df = pd.read_csv(dataset, sep=";", decimal=",")
 
 # drop columns 6 and 7
 df.drop(df.columns[[1, 6, 7]], axis=1, inplace=True)
@@ -43,7 +43,7 @@ df.rename(
 
 # create a new df (dfref) with a column that contains dates from 31/01/2011 to 31/12/2024
 dfref = pd.DataFrame(
-    pd.date_range(start="30/06/2011", end="31/12/2024", freq="M"), columns=["date_eom"]
+    pd.date_range(start="30/06/2011", end="31/12/2024", freq="ME"), columns=["date_eom"]
 )
 
 # merge df and dfref in date_eom
