@@ -1,3 +1,6 @@
 pandas
 numpy
 ydata_profiling
+streamlit
+sqlite3
+sqlalchemy
