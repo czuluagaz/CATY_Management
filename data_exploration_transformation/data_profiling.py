@@ -6,8 +6,8 @@ import seaborn as sns
 import ydata_profiling
 
 
-# Load the data from csv file
-data_
+# Load the data from csv file meterdata_table_sanitized.csv
+# data = pd.read_csv('meterdata_table_sanitized.csv')
 
 # function to create a profile report from a chosen dataset
 def create_profile_report(data):
