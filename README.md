@@ -43,6 +43,7 @@ __site__ descrpition: This table contains the info necessary to identify the pla
 10. end_tracking
 11. type (in case you are following several places eg: main residence, vacations, rental)
 12. date_creation
+13. type_building
 
 __meter_data__
 1. id_md PK
