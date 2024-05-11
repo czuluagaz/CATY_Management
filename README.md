@@ -59,3 +59,12 @@ __meter_data__
 
 
 __weather__
+1. id_weather
+2. date_time (1h/3h? forecast)
+3. code_weather
+4. temperature
+5. pressure
+6. humidity
+7. solar_exposure
+8. clouds
+9. 
