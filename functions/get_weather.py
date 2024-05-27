@@ -21,11 +21,11 @@ import os
 api_key = 'a019bc0712358cb223887c5bf73bb473'
 
 # base url
-base_url = 'http://api.openweathermap.org/data/2.5/onecall?'
+base_url = 'http://api.openweathermap.org/data/2.5/forecast?'
 
 # get the latitude and longitude from the dataset
-lat = 50.62251 
-lon = 5.66508
+lat = 50.62128845244147
+lon = 5.653424622914287
 
 # complete url
 complete_url = base_url + 'lat=' + str(lat) + '&lon=' + str(lon) + '&exclude=hourly,minutely&units=metric&appid=' + api_key

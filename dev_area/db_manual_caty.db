@@ -1,0 +1,13 @@
+-- SQL 
+-- create a table
+CREATE TABLE `meter` (
+  `id_meter` int(11) NOT NULL AUTO_INCREMENT,
+  `name_meter` varchar(255) DEFAULT NULL,
+  `serial_meter` int(11) DEFAULT NULL,
+  `type_meter` varchar(255) DEFAULT NULL,
+  `status_meter` varchar(255) DEFAULT NULL,
+  `date_meter` date DEFAULT now(),
+  "start_date_meter" date DEFAULT NULL,
+  "end_date_meter" date DEFAULT NULL,
+  PRIMARY KEY (`id_meter`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
