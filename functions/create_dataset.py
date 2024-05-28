@@ -41,7 +41,8 @@ df.rename(
     inplace=True,
 )
 
-# create a new df (dfref) with a column that contains dates from 31/01/2011 to 31/12/2024
+# create a new df (dfref) with a column that contains dates
+# from 31/01/2011 to 31/12/2024
 dfref = pd.DataFrame(
     pd.date_range(start="30/06/2011", end="31/12/2024", freq="ME"), columns=["date_eom"]
 )
