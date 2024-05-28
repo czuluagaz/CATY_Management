@@ -1,4 +1,3 @@
-weather_api_vc.py
 
 # Import weatehr temrperature from CV and add the ifno to csv file
 # Import the necessary libraries
