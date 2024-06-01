@@ -37,6 +37,10 @@ for df in dfs:
 for df in dfs:
     df["date"] = df["date"].fillna(df["date_eom"].dt.to_period("M").dt.start_time)
 
+# # if av_day is empty interpolate the value between the previous and next value
+# for df in dfs:
+#     df["av_day"] = df["av_day"].interpolate()
+
 # id av_day is empty, fill with the first value found descending in the column
 for df in dfs:
     df["av_day"] = df["av_day"].fillna(method="bfill")

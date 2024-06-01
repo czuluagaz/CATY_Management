@@ -3,4 +3,5 @@ temp/*
 data_storage/*
 .venv/*
 .venv
-
+.vscode/
+.venv/
