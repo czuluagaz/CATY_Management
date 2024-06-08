@@ -12,8 +12,8 @@ files = ["water.csv", "power.csv", "gas.csv"]
 dfs = [pd.read_csv(f"data_storage/{file}") for file in files]
 
 # rename columns 4, 5 as 'cons' and 'av_day' respectively
-for df in dfs:
-    df.rename(columns={df.columns[4]: "cons", df.columns[5]: "av_day"}, inplace=True)
+# for df in dfs:
+#     df.rename(columns={df.columns[4]: "cons", df.columns[5]: "av_day"}, inplace=True)
 
 # convert date_eom and date to datetime
 for df in dfs:
@@ -40,6 +40,8 @@ for df in dfs:
 # # if av_day is empty interpolate the value between the previous and next value
 # for df in dfs:
 #     df["av_day"] = df["av_day"].interpolate()
+
+# if in the label column is a 
 
 # id av_day is empty, fill with the first value found descending in the column
 for df in dfs:
