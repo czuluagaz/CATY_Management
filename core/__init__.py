@@ -1,3 +1,5 @@
+"""Module for core functionalities."""
+
 from core import (
     data_manager,
     settings,
