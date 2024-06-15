@@ -11,6 +11,7 @@ All the configuration variables are defined here.
 
 # Importing the required libraries
 import os
+
 # import sys
 # import logging
 
@@ -25,8 +26,12 @@ gas_daily_path = os.path.join(path, "data_storage", "resampled_data_D_gas.csv")
 gas_monthly_path = os.path.join(path, "data_storage", "grouped_data_month_gas.csv")
 
 # electricity
-electricity_daily_path = os.path.join(path, "data_storage", "resampled_data_D_power.csv")
-electricity_monthly_path = os.path.join(path, "data_storage", "grouped_data_month_power.csv")
+electricity_daily_path = os.path.join(
+    path, "data_storage", "resampled_data_D_power.csv"
+)
+electricity_monthly_path = os.path.join(
+    path, "data_storage", "grouped_data_month_power.csv"
+)
 
 # water
 water_daily_path = os.path.join(path, "data_storage", "resampled_data_D_water.csv")
@@ -39,3 +44,5 @@ gas_daliy_df = csv_to_dataframe(gas_daily_path)
 gas_monthly_df = csv_to_dataframe(gas_monthly_path)
 water_daily_df = csv_to_dataframe(water_daily_path)
 water_monthly_df = csv_to_dataframe(water_monthly_path)
+
+print(gas_daliy_df.head())
