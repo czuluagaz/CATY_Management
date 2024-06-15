@@ -22,8 +22,12 @@ from core.data_manager import csv_to_dataframe
 # Paths
 path = "../../projects/CATY_Management/"
 # gas
-gas_daily_path = os.path.join(path, "data_storage", "resampled_data_D_gas.csv")
-gas_monthly_path = os.path.join(path, "data_storage", "grouped_data_month_gas.csv")
+gas_daily_path = os.path.join(
+    path, "data_storage", "resampled_data_D_gas.csv"
+)
+gas_monthly_path = os.path.join(
+    path, "data_storage", "grouped_data_month_gas.csv"
+)
 
 # electricity
 electricity_daily_path = os.path.join(
@@ -34,8 +38,12 @@ electricity_monthly_path = os.path.join(
 )
 
 # water
-water_daily_path = os.path.join(path, "data_storage", "resampled_data_D_water.csv")
-water_monthly_path = os.path.join(path, "data_storage", "grouped_data_month_water.csv")
+water_daily_path = os.path.join(
+    path, "data_storage", "resampled_data_D_water.csv"
+)
+water_monthly_path = os.path.join(
+    path, "data_storage", "grouped_data_month_water.csv"
+)
 
 
 # Dataframes
