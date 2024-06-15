@@ -17,9 +17,9 @@ import os
 from core.data_manager import csv_to_dataframe
 
 
-
+# C:\Users\zudel\projects\CATY_Management\data_storage\resampled_data_D_gas.csv
 # Paths
-path = "/home/cyat/projects/CATY_Management/"
+path = "../../projects/CATY_Management/"
 # gas
 gas_daily_path = os.path.join(path, "data_storage", "resampled_data_D_gas.csv")
 gas_monthly_path = os.path.join(path, "data_storage", "grouped_data_month_gas.csv")
