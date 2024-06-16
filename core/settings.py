@@ -58,3 +58,9 @@ water_monthly_df = pd.read_csv(water_monthly_path)
 power_daily_df = pd.read_csv(electricity_daily_path)
 power_monthly_df = pd.read_csv(electricity_monthly_path)
 print("Dataframes loaded successfully!")
+
+# Color palette for the plots with seaborn and matplotlib
+gas_color_palette = sns.color_palette("coolwarm", 7)
+water_color_palette = sns.color_palette("coolwarm", 6)
+power_color_palette = sns.color_palette("coolwarm", 5)
+
