@@ -21,7 +21,7 @@ import streamlit as st
 
 
 sys.path.append("../../projects/CATY_Management/")
-from core.settings import (power_daily_df, gas_daily_df, water_daily_df)
+from core.settings import *
 # Variables
 
 
