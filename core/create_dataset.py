@@ -2,6 +2,19 @@
 # Version: 1.0
 # Author: CZU
 # Date: 2023-12-01
+"""
+This script reads the raw data from the utilities and preprocesses it to
+create independent csv files for each utility.
+Parameters: 
+    - raw_data.csv: raw data from utilities
+    - water.csv: water utility data
+    - power.csv: power utility data
+    - gas.csv: gas utility data
+    Returns:
+    - water.csv: water utility data
+    - power.csv: power utility data
+    - gas.csv: gas utility data   
+"""
 
 # Importing required libraries
 import time
@@ -25,11 +38,10 @@ df["date_eom"] = df["date"] + pd.offsets.MonthEnd(1)
 # in headers change ' ' to '_'
 df.columns = df.columns.str.replace(" ", "_")
 
-# create a new df (dfref) with a column that contains dates 
+# create a new df (dfref) with a column that contains dates
 # from 31/01/2011 to 31/12/2024
 dfref = pd.DataFrame(
-    pd.date_range(start="30/06/2011", end="31/12/2024", freq="ME"),
-    columns=["date_eom"]
+    pd.date_range(start="30/06/2011", end="31/12/2024", freq="ME"), columns=["date_eom"]
 )
 
 # merge df and dfref in date_eom
@@ -73,7 +85,4 @@ df_gas = df[
 df_gas.to_csv("data_storage/gas.csv", index=False)
 
 # Print the execution time
-print(
-    "Process finished. Execution time:", round(time.time() - start, 2),
-    "seconds"
-)
+print("Process finished. Execution time:", round(time.time() - start, 2), "seconds")
