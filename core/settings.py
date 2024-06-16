@@ -9,13 +9,15 @@ This is the core configuration file for the project.
 All the configuration variables are defined here.
 """
 
+
 # Importing the required libraries
 import os
+import sys
+sys.path.append("../../projects/CATY_Management/")
+from core.data_manager import csv_to_dataframe
 
 # import sys
 # import logging
-
-from core.data_manager import csv_to_dataframe
 
 
 # C:\Users\zudel\projects\CATY_Management\data_storage\resampled_data_D_gas.csv
@@ -48,11 +50,11 @@ water_monthly_path = os.path.join(
 
 # Dataframes
 
-gas_daliy_df = csv_to_dataframe(gas_daily_path)
+gas_daily_df = csv_to_dataframe(gas_daily_path)
 gas_monthly_df = csv_to_dataframe(gas_monthly_path)
 water_daily_df = csv_to_dataframe(water_daily_path)
 water_monthly_df = csv_to_dataframe(water_monthly_path)
 power_daily_df = csv_to_dataframe(electricity_daily_path)
 power_monthly_df = csv_to_dataframe(electricity_monthly_path)
 
-print(gas_daliy_df.head())
+print("Dataframes loaded successfully!")
