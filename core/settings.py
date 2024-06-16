@@ -13,8 +13,8 @@ All the configuration variables are defined here.
 # Importing the required libraries
 import os
 import sys
-sys.path.append("../../projects/CATY_Management/")
-from core.data_manager import csv_to_dataframe
+#sys.path.append("../../projects/CATY_Management/")
+
 import pandas as pd
 
 # import sys
@@ -57,5 +57,4 @@ water_daily_df = pd.read_csv(water_daily_path)
 water_monthly_df = pd.read_csv(water_monthly_path)
 power_daily_df = pd.read_csv(electricity_daily_path)
 power_monthly_df = pd.read_csv(electricity_monthly_path)
-
 print("Dataframes loaded successfully!")
