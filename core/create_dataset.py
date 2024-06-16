@@ -13,10 +13,10 @@ start = time.time()
 
 # Variables
 # call dataframe from tsv file in hard drive
-dataset = "data_storage/raw_data.csv"
+DATASET = "data_storage/raw_data.csv"
 
 # Read the csv file
-df = pd.read_csv(dataset, sep=",", encoding="utf-8", decimal=".")
+df = pd.read_csv(DATASET, sep=",", encoding="utf-8", decimal=".")
 
 # # drop columns 6 and 7
 # df.drop(df.columns[[1, 6, 7]], axis=1, inplace=True)
@@ -41,7 +41,8 @@ df.columns = df.columns.str.replace(" ", "_")
 # create a new df (dfref) with a column that contains dates
 # from 31/01/2011 to 31/12/2024
 dfref = pd.DataFrame(
-    pd.date_range(start="30/06/2011", end="31/12/2024", freq="ME"), columns=["date_eom"]
+    pd.date_range(start="30/06/2011", end="31/12/2024", freq="ME"),
+    columns=["date_eom"]
 )
 
 # merge df and dfref in date_eom
