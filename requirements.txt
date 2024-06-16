@@ -1,3 +1,4 @@
+// Description: List of required libraries for the project
 # libraries
 pandas
 seaborn
