@@ -18,9 +18,6 @@ DATASET = "data_storage/raw_data.csv"
 # Read the csv file
 df = pd.read_csv(DATASET, sep=",", encoding="utf-8", decimal=".")
 
-# # drop columns 6 and 7
-# df.drop(df.columns[[1, 6, 7]], axis=1, inplace=True)
-
 # convert date to datetime
 df["date"] = pd.to_datetime(df["date"], format="%d/%m/%Y")
 df["date_eom"] = df["date"] + pd.offsets.MonthEnd(1)
@@ -28,17 +25,7 @@ df["date_eom"] = df["date"] + pd.offsets.MonthEnd(1)
 # in headers change ' ' to '_'
 df.columns = df.columns.str.replace(" ", "_")
 
-# # rename columns 7, 8, 11 as 'cons', 'av_day.1', 'av_day.2' respectively
-# df.rename(
-#     columns={
-#         df.columns[6]: "cons",
-#         df.columns[7]: "av_day.1",
-#         df.columns[10]: "av_day.2",
-#     },
-#     inplace=True,
-# )
-
-# create a new df (dfref) with a column that contains dates
+# create a new df (dfref) with a column that contains dates 
 # from 31/01/2011 to 31/12/2024
 dfref = pd.DataFrame(
     pd.date_range(start="30/06/2011", end="31/12/2024", freq="ME"),
