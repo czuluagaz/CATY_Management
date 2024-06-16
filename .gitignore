@@ -5,6 +5,7 @@ data_storage/*
 .venv
 .vscode/
 .venv/
+dev_area/
 
 # PyBuilder
 .pybuilder/
@@ -17,3 +18,5 @@ target/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# 
