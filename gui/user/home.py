@@ -1,23 +1,41 @@
+# home dashboard for the application
+# date: 2024 - 06 - 15
+# version: 0.0
+# path: gui/user/home.py
+
+""" This is the home page of the application. 
+    It displays the energy consumption data for the home.
+    The data is displayed in the form of line charts.
+    parameters:
+    gas: pandas dataframe
+    water: pandas dataframe
+    power: pandas dataframe
+    returns:
+    None"""
+
+
 # Import libraries
 
+from math import e
 import streamlit as st
 import pandas as pd
 
+from core.settings import *
+
 # Variables
-gas = pd.read_csv("data_storage/resampled_data_D_gas.csv")
-water = pd.read_csv("data_storage/resampled_data_D_water.csv")
-power = pd.read_csv("data_storage/resampled_data_D_power.csv")
+gas = gas_daliy_df
+water = water_daily_df
+power = power_daily_df
 
-st.header('Home')
-st.title('HHL Energy Consumption Analysis Tool (CATY)')
-st.write('Home page of the application. HHL Energy Consumption Analysis Tool (CATY)')
+st.header("Home")
+st.title("HHL Energy Consumption Analysis Tool (CATY)")
+st.write("Home page of the application. HHL Energy Consumption Analysis Tool (CATY)")
 
-#df = pd.read_csv(r'/home/cyat/projects/CATY_Management/data_storage/resampled_data_D_gas.csv')
 st.header("Gas")
-st.line_chart(gas['calc_cons'])
+st.line_chart(gas["calc_cons"])
 
 st.header("Water")
-st.line_chart(water['calc_cons'])
+st.line_chart(water["calc_cons"])
 
 st.header("Power")
-st.line_chart(power['calc_cons'])
+st.line_chart(power["calc_cons"])
