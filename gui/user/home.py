@@ -23,19 +23,17 @@ import pandas as pd
 from core.settings import *
 
 # Variables
-gas = gas_daliy_df
-water = water_daily_df
-power = power_daily_df
+
 
 st.header("Home")
 st.title("HHL Energy Consumption Analysis Tool (CATY)")
 st.write("Home page of the application. HHL Energy Consumption Analysis Tool (CATY)")
 
 st.header("Gas")
-st.line_chart(gas["calc_cons"])
+st.line_chart(gas_daily_df["calc_cons"])
 
 st.header("Water")
-st.line_chart(water["calc_cons"])
+st.line_chart(water_daily_df["calc_cons"])
 
 st.header("Power")
-st.line_chart(power["calc_cons"])
+st.line_chart(power_daily_df["calc_cons"])
