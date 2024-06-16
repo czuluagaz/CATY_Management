@@ -3,7 +3,7 @@
 # date: 2024-06-15
 # version: 0.0.0
 # Path: /core/graphics.py
-""" 
+"""
 The script is responsible for the graphical analysis of the data.
 Methods for grouping data, creating graphs, and other graphical analysis tools are implemented here.
 """
