@@ -16,12 +16,12 @@
 
 # Import libraries
 
-from math import e
+import sys
 import streamlit as st
-import pandas as pd
 
-from core.settings import *
 
+sys.path.append("../../projects/CATY_Management/")
+from core.settings import (power_daily_df, gas_daily_df, water_daily_df)
 # Variables
 
 
