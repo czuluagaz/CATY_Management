@@ -85,4 +85,7 @@ df_gas = df[
 df_gas.to_csv("data_storage/gas.csv", index=False)
 
 # Print the execution time
-print("Process finished. Execution time:", round(time.time() - start, 2), "seconds")
+print(
+    "Process finished. Execution time:", round(time.time() - start, 2),
+    "seconds"
+)
