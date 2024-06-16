@@ -53,6 +53,14 @@ def process_data(data):
 def plot_data_column(data, title: str, ylabel: str, xlabel: str, color: str) -> None:
     """
     This method plots the daily data.
+    parameters:
+    data: pd.DataFrame
+    title: str
+    ylabel: str
+    xlabel: str
+    color: str
+
+    return: None
     """
 
     # Create the plot
@@ -73,6 +81,57 @@ def plot_data_column(data, title: str, ylabel: str, xlabel: str, color: str) -> 
     plt.show()
 
 
-plot_data_column(
-    gas_daily_df["calc_cons"], "Gas Daily Consumption", "Consumption (m3)", "Date", "blue"
-)
+# Function to plot the data by date and consumption
+def plot_date_consumption(
+    data, title: str, ylabel: str, xlabel: str, color: str
+) -> None:
+    """
+    This method plots the daily data.
+    parameters:
+    data: pd.DataFrame
+    title: str
+    ylabel: str
+    xlabel: str
+    color: str
+
+    return: None
+    """
+    plt.figure(figsize=(10, 6))
+    plt.plot(data["date"], data["consumption"], color=color)
+    plt.grid()
+    plt.legend([title])
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.title(title)
+    plt.ylabel(ylabel)
+    plt.xlabel(xlabel)
+    plt.tight_layout()
+    plt.show()
+
+
+# Function to plot the data by date, meter and consumption
+def plot_date_meter_consumption(
+    data: pd.DataFrame, title: str, ylabel: str, xlabel: str, color: str
+) -> None:
+    """
+    This method plots the daily data.
+    parameters:
+    data: pd.DataFrame
+    title: str
+    ylabel: str
+    xlabel: str
+    color: str
+
+    return: None
+    """
+    plt.figure(figsize=(10, 6))
+    plt.plot(data["date"], data["calc_cons"], color=color)
+    plt.grid()
+    plt.legend([title])
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.title(title)
+    plt.ylabel(ylabel)
+    plt.xlabel(xlabel)
+    plt.tight_layout()
+    plt.show()
