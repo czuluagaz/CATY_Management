@@ -15,6 +15,7 @@ import os
 import sys
 sys.path.append("../../projects/CATY_Management/")
 from core.data_manager import csv_to_dataframe
+import pandas as pd
 
 # import sys
 # import logging
@@ -50,11 +51,11 @@ water_monthly_path = os.path.join(
 
 # Dataframes
 
-gas_daily_df = csv_to_dataframe(gas_daily_path)
-gas_monthly_df = csv_to_dataframe(gas_monthly_path)
-water_daily_df = csv_to_dataframe(water_daily_path)
-water_monthly_df = csv_to_dataframe(water_monthly_path)
-power_daily_df = csv_to_dataframe(electricity_daily_path)
-power_monthly_df = csv_to_dataframe(electricity_monthly_path)
+gas_daily_df = pd.read_csv(gas_daily_path)
+gas_monthly_df = pd.read_csv(gas_monthly_path)
+water_daily_df = pd.read_csv(water_daily_path)
+water_monthly_df = pd.read_csv(water_monthly_path)
+power_daily_df = pd.read_csv(electricity_daily_path)
+power_monthly_df = pd.read_csv(electricity_monthly_path)
 
 print("Dataframes loaded successfully!")
