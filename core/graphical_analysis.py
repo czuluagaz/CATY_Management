@@ -27,20 +27,14 @@ from core.settings import (
 )
 
 # Variables
-gas_day = gas_daily_df
-gas_month = gas_monthly_df
-water_day = water_daily_df
-water_month = water_monthly_df
-power_day = power_daily_df
-power_month = power_monthly_df
+
 
 # Methods
-
-
 # Function to process the data
 def process_data(data):
     # copy the dataset
     data_proc = data.copy()
+    print(data_proc.head())
     # Convert the date column to a datetime object
     data_proc["date"] = pd.to_datetime(data_proc["date"])
     # Sort the data by date
@@ -60,8 +54,7 @@ def plot_data_column(data, title: str, ylabel: str, xlabel: str, color: str) -> 
     """
     This method plots the daily data.
     """
-    # # Process the data
-    # data = process_data(data)
+
     # Create the plot
     plt.figure(figsize=(10, 6))
     plt.plot(data, color=color)
@@ -81,5 +74,5 @@ def plot_data_column(data, title: str, ylabel: str, xlabel: str, color: str) -> 
 
 
 plot_data_column(
-    gas_day["calc_cons"], "Gas Daily Consumption", "Consumption (m3)", "Date", "blue"
+    gas_daily_df["calc_cons"], "Gas Daily Consumption", "Consumption (m3)", "Date", "blue"
 )
