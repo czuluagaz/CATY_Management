@@ -10,6 +10,7 @@ Home page for the user
 # import libraries
 import streamlit as st
 
-st.title("CATY- Consumption Analysis Tool Y")
+st.title("CATY- Consumption Analysis Tool Yield")
 st.header("Home")
-st.write("Hello, world!")
+st.title("HHL Energy Consumption Analysis Tool (CATY)")
+st.write("Home page of the application. HHL Energy Consumption Analysis Tool (CATY)")
