@@ -25,9 +25,6 @@ from core.settings import (
     gas_daily_df,
     water_daily_df,
     power_daily_df,
-    gas_monthly_df,
-    water_monthly_df,
-    power_monthly_df,
 )
 
 # Variables
