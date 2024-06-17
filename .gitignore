@@ -1,11 +1,9 @@
+# Directories
 .mypy_cache
-temp/*
 data_storage/*
-.venv/*
-.venv
 .vscode/
 .venv/
-dev_area/*
+dev_area/
 
 # PyBuilder
 .pybuilder/
@@ -18,5 +16,3 @@ target/
 __pycache__/
 *.py[cod]
 *$py.class
-
-# 
