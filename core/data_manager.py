@@ -9,8 +9,8 @@ This module contains the functions to manage the data from the dataset.
 """
 
 # Importing the necessary libraries
-import pandas as pd
 from pathlib import Path
+import pandas as pd
 
 
 # Function to convert .csv file to pandas dataframe
