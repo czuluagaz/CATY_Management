@@ -48,7 +48,10 @@ water_daily_path = os.path.join(
 water_monthly_path = os.path.join(
     PATH, "data_storage", "grouped_data_month_water.csv"
 )
-
+# path to db
+db_path = os.path.join(
+    PATH, "DB", "caty_sql"
+)
 
 # Dataframes
 
