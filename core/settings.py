@@ -13,7 +13,8 @@ All the configuration variables are defined here.
 # Importing the required libraries
 import os
 import sys
-#sys.path.append("../../projects/CATY_Management/")
+
+# sys.path.append("../../projects/CATY_Management/")
 
 import pandas as pd
 import seaborn as sns
@@ -26,12 +27,8 @@ import seaborn as sns
 # Paths
 PATH = "../../projects/CATY_Management/"
 # gas
-gas_daily_path = os.path.join(
-    PATH, "data_storage", "resampled_data_D_gas.csv"
-)
-gas_monthly_path = os.path.join(
-    PATH, "data_storage", "grouped_data_month_gas.csv"
-)
+gas_daily_path = os.path.join(PATH, "data_storage", "resampled_data_D_gas.csv")
+gas_monthly_path = os.path.join(PATH, "data_storage", "grouped_data_month_gas.csv")
 
 # electricity
 electricity_daily_path = os.path.join(
@@ -42,16 +39,10 @@ electricity_monthly_path = os.path.join(
 )
 
 # water
-water_daily_path = os.path.join(
-    PATH, "data_storage", "resampled_data_D_water.csv"
-)
-water_monthly_path = os.path.join(
-    PATH, "data_storage", "grouped_data_month_water.csv"
-)
+water_daily_path = os.path.join(PATH, "data_storage", "resampled_data_D_water.csv")
+water_monthly_path = os.path.join(PATH, "data_storage", "grouped_data_month_water.csv")
 # path to db
-db_path = os.path.join(
-    PATH, "DB", "caty_sql"
-)
+db_path = os.path.join(PATH, "DB", "caty_sql")
 
 # Dataframes
 
@@ -68,3 +59,5 @@ gas_color_palette = sns.color_palette("coolwarm", 7)
 water_color_palette = sns.color_palette("coolwarm", 6)
 power_color_palette = sns.color_palette("coolwarm", 5)
 
+# Ressources path
+icon_path = os.path.join(PATH, "ressources", "images", "utilities-energy-monitor.svg")

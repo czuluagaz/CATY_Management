@@ -10,7 +10,11 @@ This module contains the functions to manage the data from the dataset.
 
 # Importing the necessary libraries
 from pathlib import Path
+import sys
 import pandas as pd
+#
+sys.path.append("../../projects/CATY_Management/")
+from core.settings import gas_monthly_df
 
 
 # Function to convert .csv file to pandas dataframe
@@ -57,3 +61,19 @@ def read_data_csv_df(directory: str, filename: str) -> pd.DataFrame:
         print(f"File {filename} not found")
         print("Please verify the file name and try again, and path")
         exit()
+
+# set date as index, and sort the index, and return the dataframe (inplace=False)
+def set_date_index(df: pd.DataFrame, date_col: str) -> pd.DataFrame:
+    """
+    This function sets the date column as the index of the dataframe and sorts the index.
+    """
+    df[date_col] = pd.to_datetime(df[date_col])
+    df.set_index(date_col, inplace=False)
+    df.sort_index(inplace=False)
+    print("Date column set as index and sorted")
+    print(df)
+    return df
+
+gas_monthly_df = set_date_index(gas_monthly_df, "date")
+print(gas_monthly_df)
+
