@@ -16,22 +16,26 @@
 
 # Import libraries
 
-import sys
 import streamlit as st
 
 
-sys.path.append("../../projects/CATY_Management/")
 from core.settings import *
+from core.gui_streamlit import *
+
 # Variables
+page = "Gas"
 
 
-st.header("Gas")
-st.title("HHL Energy Consumption Analysis Tool (CATY)")
-st.write("Graphics for Gas consumption. HHL Energy Consumption Analysis Tool (CATY)")
+# Header and title
+# header_pages(page)
+st.markdown("[Home](#home) | [Water](#water) | [Power](#power)")
+st.title("CATY- Consumption Analysis Tool Yield")
+st.header(f"{page}")
+st.subheader("HHL Energy Consumption Analysis Tool (CATY)")
 
 st.header("Gas Daily")
 st.line_chart(gas_daily_df["calc_cons"])
-st.markdown("[Home](#home) | [Water](#water) | [Power](#power)")
+
 
 st.header("Gas Monthly")
 st.line_chart(gas_monthly_df["calc_cons"])
