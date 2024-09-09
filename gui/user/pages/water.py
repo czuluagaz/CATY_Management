@@ -33,5 +33,5 @@ st.header("Water Daily")
 st.line_chart(water_daily_df["calc_cons"])
 st.markdown("[Home](#home) | [Water](#water) | [Power](#power)")
 
-st.header("Gas Monthly")
+st.header("Water Monthly")
 st.line_chart(water_monthly_df["calc_cons"])
