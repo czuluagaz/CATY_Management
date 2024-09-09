@@ -13,7 +13,7 @@ import sqlite3
 import options
 
 
-from core.settings import db_path, #DATABASE_NAME, 
+from core.settings import db_path #DATABASE_NAME, 
 
 class DBManager:
     def __init__(self) -> None:
