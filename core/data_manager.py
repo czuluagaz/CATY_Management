@@ -14,7 +14,7 @@ import sys
 import pandas as pd
 #
 sys.path.append("../../projects/CATY_Management/")
-from core.settings import gas_monthly_df
+# from core.settings import gas_monthly_df
 
 
 # Function to convert .csv file to pandas dataframe
@@ -74,6 +74,6 @@ def set_date_index(df: pd.DataFrame, date_col: str) -> pd.DataFrame:
     print(df)
     return df
 
-gas_monthly_df = set_date_index(gas_monthly_df, "date")
-print(gas_monthly_df)
+# gas_monthly_df = set_date_index(gas_monthly_df, "date")
+# print(gas_monthly_df)
 
