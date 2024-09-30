@@ -5,13 +5,12 @@
 # Path: /core/graphics.py
 """
 The script is responsible for the graphical analysis of the data.
-Methods for grouping data, creating graphs, and other graphical analysis tools are implemented here.
+Methods for grouping data, creating graphs, and other graphical 
+analysis tools are implemented here.
 """
 
 # Importing the necessary libraries
-import sys
 import matplotlib.pyplot as plt
-import seaborn as sns
 import pandas as pd
 import numpy as np
 
