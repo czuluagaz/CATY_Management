@@ -1,8 +1,10 @@
 # CATY_Management
+
 Consumption Analysis and Trend Yield (insights and results).
 All in one place to keep track of home life
 
-# Strcture
+## Structure
+
 1. Utilities Data
    - Record Data
    - Data Analysis
@@ -10,12 +12,15 @@ All in one place to keep track of home life
 2. Home Spending
 3. Vehicle management
 
-# what is inside
+## what is inside
+
 1. Utilities data:
 
-**Table**: 
-__meters__ (this table structure and define the data that is being used in other tables)
+### **Table**
+
+__meters** (this table structure and define the data that is being used in other tables)
 _Fields_
+
 1. id_meter(PK): int4, format: 0000. Unique, sequential, autoincrease
 2. date_creation_meter: date, auto: now() format yyyy-mm-dd hh:mm (UTC?)
 3. meter_serial: serial number/EAN number of physical meter
@@ -30,8 +35,8 @@ _Fields_
 12. time_granurality ??? is it necesary???
 13. source: (if measure is not local?) ??? is it necesary???
 
+### **site** descrpition: This table contains the info necessary to identify the place where the follow is made
 
-__site__ descrpition: This table contains the info necessary to identify the place where the follow is made
 1. id_site PK
 2. name_site
 3. lat
@@ -46,20 +51,18 @@ __site__ descrpition: This table contains the info necessary to identify the pla
 12. date_creation
 13. type_building
 
-__meter_data__
+### **meter_data**
+
 1. id_md PK
 2. date_utc datetime
 3. id_meter FK
 4. value
 
-
 **set reminder to control**
 **introduce the meassure from qr_code**
 
+### **weather**
 
-
-
-__weather__
 1. id_weather
 2. date_time (1h/3h? forecast)
 3. code_weather
@@ -68,11 +71,11 @@ __weather__
 6. humidity
 7. solar_exposure
 8. clouds
-9. 
+9.
 
-Consumption Analysis and Trend Yield (CATY): 
+Consumption Analysis and Trend Yield (CATY):
 
-To create a comprehensive Consumption Analysis Tool Yield, we need to consider various aspects including data collection, processing, and analysis. 
+To create a comprehensive Consumption Analysis Tool Yield, we need to consider various aspects including data collection, processing, and analysis.
 
 1. Define Objectives and Requirements
 
