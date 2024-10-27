@@ -1,0 +1,10 @@
+id_location,location,user,count_per_user,city,country,zip,lat,long,altitude
+1,,1,1,wanze,BE,,50.530421,5.214633,
+2,,1,2,Beyne-heusay,BE,4610,50.62131,5.65346,
+3,,2,1,Manizales,CO,,,,
+4,,3,1,Bogota,CO,,,,
+5,,4,1,liege,BE,,50.62103,5.57545,
+6,,5,1,liege,BE,,50.62195,5.591357,
+7,,6,1,huy,BE,,50.532296,5.236995,
+8,,7,1,,BE,,,,
+9,,,,,,,,,
