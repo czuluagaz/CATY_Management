@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-19422edd0a0-239014545a69b79b": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "caty.sql",
+			"save-password": true,
+			"configuration": {
+				"database": "/home/dev/projects/CATY_Management/DB/caty.sql",
+				"url": "jdbc:sqlite:/home/dev/projects/CATY_Management/DB/caty.sql",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}
