@@ -77,3 +77,15 @@ def set_date_index(df: pd.DataFrame, date_col: str) -> pd.DataFrame:
 # gas_monthly_df = set_date_index(gas_monthly_df, "date")
 # print(gas_monthly_df)
 
+# function to clean and preprocess the data from source zudel(to be deprecated in the future)
+def clean_data_zudel(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    This function cleans and preprocesses the data from the source zudel.
+    """
+    # create a copy of the dataframe and name it df_clean
+    df_clean = df.copy()
+    # sort the df_clean by "date" column
+    df_clean.sort_values(by="date", inplace=True)
+    # aggregate duplicate values in the data 2021-03-04
+    df_clean = df_clean.groupby("date").mean()
+    
